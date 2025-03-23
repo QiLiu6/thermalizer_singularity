@@ -82,8 +82,8 @@ class Trainer:
 
     def init_wandb(self):
         ## Set up wandb stuff
-        wandb.init(entity="chris-pedersen",project=self.config["project"],
-                        dir="/scratch/cp3759/thermalizer_data/wandb_data",config=self.config)
+        wandb.init(entity="qiliu2221",project=self.config["project"],
+                        dir="/scratch/ql2221/thermalizer_data/wandb_data",config=self.config)
         self.config["save_path"]=wandb.run.dir
         self.config["wandb_url"]=wandb.run.get_url()
         self.wandb_init=True 
@@ -93,8 +93,8 @@ class Trainer:
 
     def resume_wandb(self):
         """ Resume a wandb run from the self.config wandb url. """
-        wandb.init(entity="chris-pedersen",project=self.config["project"],
-                            id=self.config["wandb_url"][-8:],dir="/scratch/cp3759/thermalizer_data/wandb_data", resume="must")
+        wandb.init(entity="qiliu2221",project=self.config["project"],
+                            id=self.config["wandb_url"][-8:],dir="/scratch/ql2221/thermalizer_data/wandb_data", resume="must")
         self.wandb_init=True
         return
 
