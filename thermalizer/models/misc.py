@@ -16,7 +16,6 @@ import thermalizer.models.diffusion as diffusion
 import thermalizer.models.cnn as cnn
 import thermalizer.models.unet_modern as munet
 import thermalizer.models.drn as drn
-import thermalizer.models.fno as fno
 
 ### Model factory
 def model_factory(config):
